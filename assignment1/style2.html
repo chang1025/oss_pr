@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment#1 22200200 김창권</title>
+</head>
+
+<style>
+  .div_navtop{
+    color: white;
+    padding: 0px 5px 25px 5px;
+  }
+
+  .div_navsec{
+    background-color: white;
+    padding: 10px;
+  }
+
+  .div_navright{
+    float:right;
+  }
+
+  .div_navright li{
+    background-color: red;
+    border: 1px solid red;
+    margin: 3px;
+    border-radius: 5px;
+  }
+
+  .div_navright li.active{
+    background-color: white;
+    border: 1px solid red;
+    margin: 3px;
+    border-radius: 5px;
+  }
+
+  .div_navright li:hover{
+    background-color: white;
+  }
+
+  ul{
+    list-style:none;
+    padding: 0px;
+  }
+
+  
+</style>
+
+<body style = "background-color: red;">
+  <!-- 첫번째! -->
+  <div class="div_navtop">
+    <div> 
+      <h1 style="font-size: 40px;">Welcome to My Homepage</h1>
+    </div>
+    <div>
+      <h1 style="font-size: 20px">Use the menu to select different Stylesheets</h1>
+    </div>
+  </div>
+
+  <!-- 두번째! -->
+   <div class="div_navsec">
+
+    <div class="div_navright" style="display: flex;">
+      <ul>
+        <li>Stylesheet1</li>
+        <li class="active">Stylesheet2</li>
+        <li>Stylesheet3</li>
+        <li>Stylesheet4</li>
+        <li>No Stylesheet</li>
+      </ul>
+    </div>
+
+    <div style="color: red;">Same Page Different Stylesheets</div>
+    <div>
+      This is a demonstration of how different stylesheets can change the 
+      layout of your HTML page. You can change the layout of this page by 
+      selecting different stylesheets in the menu, or by selecting one of the 
+      following links:
+    </div>
+
+    <div style="color: red;">
+      Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.
+    </div>
+
+    <div style="color: red;">No Styles</div>
+    <div>
+      This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+    </div>
+    <div style="color: red;">No Stylesheet.</div>
+   </div>
+  <!-- 세번째! -->
+   <div style="background-color: pink;">
+    <div style="color: red">Side-Bar</div>
+    <div style="color: red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+   </div>
+
+   <!-- 네번째! -->
+    <div style="color: white; font-size: 10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</div>
+   
+</body>
+</html>
