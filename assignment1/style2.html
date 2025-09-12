@@ -28,6 +28,11 @@
     border-radius: 5px;
   }
 
+  .div_navright li a{
+    color: white;
+    text-decoration: node;
+  }
+
   .div_navright li.active{
     background-color: white;
     border: 1px solid red;
@@ -35,8 +40,16 @@
     border-radius: 5px;
   }
 
+  .div_navright li.active a{
+    color: red;
+  }
+
   .div_navright li:hover{
     background-color: white;
+  }
+
+  .div_navright li a:hover{
+    color: red;
   }
 
   ul{
@@ -44,6 +57,10 @@
     padding: 0px;
   }
 
+  .div_navsec a{
+    color:red;
+    text-decoration: none;
+  }
   
 </style>
 
@@ -63,11 +80,11 @@
 
     <div class="div_navright" style="display: flex;">
       <ul>
-        <li>Stylesheet1</li>
-        <li class="active">Stylesheet2</li>
-        <li>Stylesheet3</li>
-        <li>Stylesheet4</li>
-        <li>No Stylesheet</li>
+        <li><a href="./style1.html">Stylesheet1</a></li>
+        <li class="active"><a href="./style2.html">Stylesheet2</a></li>
+        <li><a href="./style3.html">Stylesheet3</a></li>
+        <li><a href="./style4.html">Stylesheet4</a></li>
+        <li><a href="./index.html">No Stylesheet</a></li>
       </ul>
     </div>
 
@@ -80,14 +97,17 @@
     </div>
 
     <div style="color: red;">
-      Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.
+      <a href="./style1.html">Stylesheet1</a>,
+      <a href="./style2.html">Stylesheet2</a>,
+      <a href="./style3.html">Stylesheet3</a>,
+      <a href="./style4.html">Stylesheet4</a>.
     </div>
 
     <div style="color: red;">No Styles</div>
     <div>
       This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
     </div>
-    <div style="color: red;">No Stylesheet.</div>
+     <a href="./index.html">No Stylesheet</a>.
    </div>
   <!-- 세번째! -->
    <div style="background-color: pink;">

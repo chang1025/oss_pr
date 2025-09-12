@@ -10,10 +10,14 @@
   .td{
     background-color: gray;
     color: white;
-    border: 1px solid gray;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-right: 5px;
+    border: 1px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .td a{
+    text-decoration: none;
+    color: white;
   }
 
   .td.active{
@@ -26,19 +30,22 @@
 </style>
 
 <body>
+  <!-- 1구역 -->
   <div style="color: green; font-size: 20px; padding: 10px 0px 0px 15px;"><h2>Welcome to My Homepage</h2></div>
   <div style="margin: 0px 0px 15px 15px;">Use the menu to select different Stylesheets</div>
   
-  <table style="margin: 40px 0px 0px 15px;">
+  <!-- 1구역 버튼 -->
+  <table style="margin: 40px 0px 0px 5px; border-spacing: 10px 0px;">
     <tr>
-      <td class="td">Stylesheet1</td>
-      <td class="td">Stylesheet2</td>
-      <td class="td active">Stylesheet3</td>
-      <td class="td">Stylesheet4</td>
-      <td class="td">No Stylesheet</td>
+      <td class="td"><a href="./style1.html">Stylesheet1</a></td>
+      <td class="td"><a href="./style2.html">Stylesheet2</a></td>
+      <td class="td active"><a href="./style3.html">Stylesheet3</a></td>
+      <td class="td"><a href="./style4.html">Stylesheet4</a></td>
+      <td class="td"><a href="./index.html">No Stylesheet</a></td>
     </tr>
   </table>
 
+  <!-- 2구역 -->
   <div style="color: green; font-size: 20px; padding: 0px 0px 0px 15px;">
     <h2>Same Page Different Stylesheets</h2>
   </div>
@@ -46,10 +53,15 @@
   <div style="margin: 0px 0px 0px 15px;">
     This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
   </div>
+  <!-- 2구역 버튼 -->
   <div style="margin: 0px 0px 15px 15px;">
-    Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.
+    <a href="./style1.html" style="color: black;">Stylesheet1</a>,
+    <a href="./style2.html" style="color: black;">Stylesheet2</a>,
+    <a href="./style3.html" style="color: black;">Stylesheet3</a>,
+    <a href="./style4.html" style="color: black;">Stylesheet4</a>.
   </div>
 
+  <!-- 3구역 -->
   <div style="color: green; font-size: 20px; padding: 0px 0px 0px 15px;">
     <h2>No Styles</h2>
   </div>
@@ -57,11 +69,12 @@
   <div style="margin: 0px 0px 0px 15px;">
     This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
   </div>
-
+  <!-- 3구역 버튼 -->
   <div style="margin: 0px 0px 15px 15px;">
-    No Stylesheet.
+    <a href="./index.html" style="color: black;">No Stylesheet</a>.
   </div>
 
+  <!-- 4구역 -->
   <div style="margin: 0px 0px 0px 15px; background: whitesmoke; border: 1px solid whitesmoke;">
     <div style="color: green; font-size: 20px; padding: 10px 0px 0px 15px;">
       Side-Bar

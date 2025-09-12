@@ -11,7 +11,24 @@
     color: greenyellow;
     margin-top: 40px;
   }
-  
+
+  .ul_button li.active{
+    color: white;
+  }
+
+  .ul_button li.active a{
+    color: white;
+  }
+
+  .ul_button a{
+    color: greenyellow;
+    text-decoration: none;
+  }
+
+  .ul_button a:hover{
+    color: white;
+  }
+
   .div_right{
     float: right;
     border: 1px solid white;
@@ -31,6 +48,10 @@
     color: greenyellow; 
     margin: 0px 0px 15px 15px; 
     font-size: 15px;
+  }
+
+  .div_smallfont a{
+    color: white;
   }
 
   .div_navbottom{
@@ -58,11 +79,11 @@
   </div>
   
   <ul class="ul_button">
-    <li>Stylesheet 1</li>
-    <li>Stylesheet 2</li>
-    <li>Stylesheet 3</li>
-    <li>Stylesheet 4</li>
-    <li>No Stylesheet</li>
+    <li><a href="./style1.html">Stylesheet1</a></li>
+    <li><a href="./style2.html">Stylesheet2</a></li>
+    <li><a href="./style3.html">Stylesheet3</a></li>
+    <li class="active"><a href="./style4.html">Stylesheet4</a></li>
+    <li><a href="./index.html">No Stylesheet</a></li>
   </ul>
 
   <div class="div_bigfont" style="margin: 70px 0px 25px 0px;">
@@ -74,7 +95,10 @@
   </div>
 
   <div class="div_smallfont">
-    Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.
+    <a href="./style1.html">Stylesheet1</a>,
+    <a href="./style2.html">Stylesheet2</a>,
+    <a href="./style3.html">Stylesheet3</a>,
+    <a href="./style4.html">Stylesheet4</a>.
   </div>
 
   <div class="div_bigfont" style="margin-bottom: 25px">No Styles</div>
@@ -82,7 +106,7 @@
     This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
   </div>
   <div class="div_smallfont">
-    No Stylesheet.
+    <a href="./index.html">No Stylesheet</a>.
   </div>
 
   <div class="div_navbottom">

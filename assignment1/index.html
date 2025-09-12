@@ -10,25 +10,32 @@
   .ul_button{
     margin-top: 20px;
   }
+  .ul_button a{
+    text-decoration: none;
+    color: black;
+  }
 </style>
 
 <body>
-  <div style="font-size: 30px; padding: 10px 0px 20px 15px;">
+  <!-- 1구역 -->
+  <div style="font-size: 30px; padding: 10px 0px 20px 15px; font-weight: bold;">
     <h7>Welcome to My Homepage</h7>
   </div>
   <div style="margin: 0px 0px 15px 15px; font-size: 15px;">
     <h7>Use the menu to select different Stylesheets</h7>
   </div>
   
+  <!-- 이동 버튼 -->
   <ul class="ul_button">
-    <li>Stylesheet 1</li>
-    <li>Stylesheet 2</li>
-    <li>Stylesheet 3</li>
-    <li>Stylesheet 4</li>
-    <li>No Stylesheet</li>
+    <li><a href="./style1.html">Stylesheet 1</a></li>
+    <li><a href="./style2.html">Stylesheet 2</a></li>
+    <li><a href="./style3.html">Stylesheet 3</a></li>
+    <li><a href="./style4.html">Stylesheet 4</a></li>
+    <li><a href="./index.html">No Stylesheet</a></li>
   </ul>
 
-  <div style="font-size: 30px; padding: 10px 0px 0px 15px; margin: 20px 0px 20px 0px;">
+  <!-- 2구역 -->
+  <div style="font-size: 30px; padding: 10px 0px 0px 15px; margin: 20px 0px 20px 0px; font-weight: bold;">
     Same Page Different Stylesheets
   </div>
 
@@ -36,20 +43,29 @@
     This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
   </div>
 
+  <!-- 2구역 이동 버튼 -->
   <div style="margin: 0px 0px 10px 15px; font-size: 15px;">
-    Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.
+    <a href="./style1.html" style="color: blue;">Stylesheet 1</a>,
+    <a href="./style2.html" style="color: blue;">Stylesheet 2</a>,
+    <a href="./style3.html" style="color: blue;">Stylesheet 3</a>,
+    <a href="./style4.html" style="color: blue;">Stylesheet 4</a>.
   </div>
 
-  <div style="font-size: 30px; padding: 10px 0px 0px 15px; margin-bottom: 25px">No Styles</div>
+  <!-- 3구역 -->
+  <div style="font-size: 30px; padding: 10px 0px 0px 15px; margin-bottom: 25px; font-weight: bold;">
+    No Styles
+  </div>
   <div style="margin: 0px 0px 0px 15px; font-size: 15px;">
     This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
   </div>
+  <!-- 3구역 이동 버튼 -->
   <div style="margin: 0px 0px 15px 15px; font-size: 15px;">
-    No Stylesheet.
+    <a href="./index.html" style="color: blue;">No Stylesheet</a>.
   </div>
 
+  <!-- 4구역 -->
   <div>
-    <div style="margin: 0px 0px 15px 15px; font-size: 30px;">Side-Bar</div>
+    <div style="margin: 0px 0px 15px 15px; font-size: 20px; font-weight: bold;">Side-Bar</div>
     <div style="margin: 0px 0px 15px 15px; font-size: 15px; ">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
   </div>
 
