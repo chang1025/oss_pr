@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment#2 22200200 김창권</title>
+</head>
+<body>
+  <div style="font-size:larger; font-weight: bolder;">Dynamic Web page</div>
+
+  <input type="text" id="input_text1" name="text1"/>
+  <button style="background-color: aquamarine; color: blueviolet;" onclick="add();">추가</button>
+  <button style="background-color: pink; color: orangered;"  onclick="del();">삭제</button>
+
+  <ul id="add_list">
+
+  </ul>
+
+  <script>
+    let input = document.getElementById("input_text1");
+    let new_list = document.getElementById("add_list");
+
+    function add(){
+      let in_li = document.createElement("li");
+      if(input.value != ''){
+        in_li.textContent = input.value;
+        new_list.appendChild(in_li);
+      }
+    }
+
+    function del(){
+      let list = document.getElementById("add_list");
+      let de_li = list.getElementsByTagName('li');
+
+      for(let i = de_li.length - 1; i >= 0; i--){
+        de_li[i].remove();
+      }
+      
+    }
+  </script>
+  
+</body>
+</html>

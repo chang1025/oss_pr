@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment#2 22200200 김창권</title>
+</head>
+
+<body>
+  <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg">
+  <div>Checkout form</div>
+
+
+  <!-- 정보 입력 칸 -->
+  <div>
+    <div>
+      Below is an example form built entirely with Bootstrap’s form controls. 
+      Each required form group has a validation state that can be 
+      triggered by attempting to submit the form without completing it.
+    </div>
+
+    <!-- Your cart -->
+    <div>
+      <div>Your cart 3</div>
+
+      <table>
+        <tr>
+          <td>
+            <div>Product name $12</div>
+            <div>Brief description</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>Second product $8</div>
+            <div>Brief description</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>Third item $5</div>
+            <div>Brief description</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>Promo code -$5</div>
+            <div>EXAMPLECODE</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>Total (USD) $20</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <form>
+              <input type="text" id="input_promo_code" name="promo_code" placeholder="Promo code">
+              <input type="submit" value="Redeem">
+            </form>          
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <form>
+    <div>Billing address</div>
+
+    <!-- 이름, 성 -->
+    <div>
+      <label for="input_first_name">First name</label> 
+      <label for="input_last_name">Last name</label> <br/>
+      <input type="text" id="input_first_name" name="first_name" required>
+      <input type="text" id="input_last_name" name="last_name" required>
+    </div>
+
+    <!-- 사용자 이름 -->
+    <div>
+      <label for="input_user_name">Username</label> <br/>
+      <input type="text" id="input_user_name" name="user_name" placeholder="Username" required>
+    </div>
+
+    <!-- 이메일 -->
+    <div>
+      <label for="input_email_name">Email (Optional)</label> <br/>
+      <input type="text" id="input_email_name" name="email_name" placeholder="you@example.com">
+    </div>
+
+    <!-- 주소1 -->
+    <div>
+      <label for="input_address1_name">Address</label> <br/>
+      <input type="text" id="input_address1_name" name="address1_name" placeholder="1234 Main St" required>
+    </div>
+
+    <!-- 주소2 -->
+    <div>
+      <label for="input_address2_name">Address 2 (Optional)</label> <br/>
+      <input type="text" id="input_address2_name" name="address2_name" placeholder="Apartment or suite">
+    </div>
+
+    <!-- 나라, 지역, zip -->
+    <div>
+      <label for="input_country_name">Country</label>
+      <label for="input_state_name">State</label>
+      <label for="input_zip_name">Zip</label> <br/>
+      <input type="text" list="list_country" id="input_country_name" name="country_name" placeholder="Choose..." required>
+      <datalist id="list_country">
+        <option>Choose...</option>
+        <option>Korea</option>
+      </datalist>
+      <input type="text" list="list_state" id="input_state_name" name="state_name" placeholder="Choose..." required>
+      <datalist id="list_state">
+        <option>Choose...</option>
+        <option>California</option>
+      </datalist>
+
+      <input type="text" id="input_zip_name" name="zip_name" required>
+    </div>
+
+    <!-- checkbox -->
+    <div>
+      <input type="checkbox" name="input_shipping1" id="input_shipping1">
+      <label for="input_shipping1">Shipping address is the same as my billing address</label>
+    </div>
+    <div>
+      <input type="checkbox" name="input_shipping2" id="input_shipping2">
+      <label for="input_shipping2">Save this information for next time</label>
+    </div>
+
+    <!-- payment -->
+     <div>
+      <input type="radio" name="input_payment" id="input_credit" checked/>
+      <label for="input_credit">Credit card</label>
+     </div>
+     <div>
+      <input type="radio" name="input_payment" id="input_debit"/>
+      <label for="input_debit">Debit card</label>
+     </div>
+     <div>
+      <input type="radio" name="input_payment" id="input_paypel"/>
+      <label for="input_paypel">Paypel</label>
+     </div>
+
+    <!-- name of card -->
+    <div>
+      <label for="input_card_name">Name on card</label> 
+      <label for="input_card_number">Credit card number</label> <br/>
+      <input type="text" id="input_card_name" name="card_name" required/>
+      <input type="text" id="input_card_number" name="card_number" required/>
+    </div>
+
+    <div>Full name as displayed on card</div>
+
+    <!-- expiration -->
+    <div>
+      <label for="input_expiration">Expiration</label> 
+      <label for="input_cvv">CVV</label> 
+      <label for="input_birthday">Birthday (Optional)</label> <br/>
+      <input type="text" id="input_expiration" name="expiration" required/>
+      <input type="text" id="input_cvv" name="cvv" required/>
+      <input type="date" id="input_birthday" name="birthday" required/>
+    </div>
+
+    <!-- 추가 textarea -->
+    <div>
+      <label for="input_text_area">Reason (Optional)</label>
+      <textarea name="reason" cols="40" rows="5">Reason for sign in</textarea>
+    </div>
+
+    <input type="submit" value="Continue to checkout"/>
+    </form>
+
+    <div>© 2017–2022 Company Name</div>
+  <div>
+    <a>Privacy</a>
+    <a>Terms</a>
+    <a>Support</a>
+  </div>
+  </div>
+</body>
+</html>

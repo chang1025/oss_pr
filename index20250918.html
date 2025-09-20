@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>20250918 강의 내용</title>
+</head>
+<body>
+  <!-- javascript basic 1 -->
+  <script>
+    //alert("안녕하세요!!");
+
+    let sum = 0;
+    for(let i = 0; i <= 100; i++){
+      sum += i;
+    }
+
+    //alert("0부터 100까지 더하면.. : " + sum + " 입니다.");
+
+  
+    var aaa = 0; // 다시 선언 가능, 중복 선언 가능
+    let bbb = 0; // let은 일반 변수처럼 사용
+    const ccc = 0; // 상수처럼 한 번 선언하고 값을 바꿀 수 없음
+
+    console.log("javascript는 java와 완전히 다른 언어입니다.");
+
+    //let confirm_result = confirm("정말로 삭제하시겠습니까?");
+    //alert(confirm_result);
+    //setTimeout(function(){alert(12345678)}, 1000);
+
+    let width1 = window.innerWidth;
+    let width2 = window.outerWidth;
+    //alert(width1 + " : "+ width2);
+    let height1 = window.innerHeight;
+    let height2 = window.outerHeight;
+    //alert(height1 + " : " + height2);
+
+    // window.location.href = "https://www.daum.net";
+    // location.replace("https://www.daum.net");
+
+    let obj = {
+      phone : "010-9999-8888",
+      stdnum : "2000000",
+      morningrun : function(){
+        alert("저는 새벽에 달리겠습니다.");
+      }
+    };
+    obj.name = "객체 이름이야.";
+    obj["title"] = "객체 제목이야."
+    console.log(obj.name);
+    console.log(obj.phone);
+    console.log(obj.stdnum);
+    console.log(obj.title);
+  </script>
+   
+
+  <h4>덧셈 계산기</h4>
+  <form>
+    <input type="numebr" size="2" name="num1" id="num1" pattern="\d*"/>
+    +
+    <input type="number" size="2" name="num2" id="num2" pattern="\d*"/>
+    <button onclick="add()" type="button"> = </button>
+    <input type="numebr" size="2" name="result" id="result" result="\d*"/>
+    <br><br>
+    <input type="reset" value="초기화">
+  </form>
+
+  <script>
+    function add(){
+      let num1 = document.getElementById("num1");
+      let num2 = document.getElementById("num2");
+
+      let sum = Number(num1.value) + Number(num2.value);
+
+      let result = document.getElementById("result");
+      result.value = sum;
+    }
+
+    let type1 = "abc";
+    alert("tyep1 : " + type1);
+    alert(`type1 : ${type1}`);
+  </script>
+
+  <div id="div_test"
+  onclick="listener_onclick()"
+  onmouseover="console.log('mouse over')"
+  onmouseout="console.log('mouse out')"
+  style="height:200px; background-color: aquamarine;">안녕하세요!</div>
+
+  <input type="text" onchange="console.log('change?')" onkeydown="console.log('kd')" onkeyup="console.log('ku')"/>
+
+  <script>
+    function listener_onclick(){
+      alert("you clicked!!");
+      let div_test = document.getElementById("div_test");
+      div_test.style = "background-color : yellow";
+      div_test.innerHTML = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROyiwW2TDeWpIWavVNcuOzRhanQ2ie7xXg26FXlZ8TON1_Bs5Pi20xXsyQ1alC327ACL0YSG48VGBv0V7_KHVCUZiKDkF_AMp_xQXAznZZWA">';
+    }
+  </script>
+</body>
+</html>
