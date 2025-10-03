@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+  <style>
+    .div_obj{
+      position: fixed;
+      top: 50px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+    }
+
+    .div_btn{
+      left: 50px;
+      background-color: aqua;
+    }
+
+    .div_goal{
+      left: 450px;
+      background-color: yellow;
+    }
+  </style>
+  <input id="input_score" value="0"/>
+
+  <div id="div_btn" class="div_obj div_btn" onclick="listener_btn_clicked()">OBJ</div>
+  <div class="div_obj div_goal">GOAL</div>
+
+  <script>
+    let move_function = null;
+    let starttime = null;
+    let finishtime = null;
+
+    function listener_btn_clicked(){
+    }
+
+    let div_btn = document.getElementById("div_btn");
+    div_btn.addEventListener("mousedown", function(){
+      starttime = Date.now();
+      console.log(starttime);
+    });
+
+    div_btn.addEventListener("mouseup", function(){
+      finishtime = Date.now();
+      let gap_time = finishtime - starttime;
+      console.log(starttime + "~" + finishtime + ":" + gap_time);
+
+      $("#input_score").val(gap_time);
+      setInterval(listener_move, 2000);
+    });
+
+    clearInterval(move_function);
+
+    let target_move = 0;
+    let temp_move = 0;
+    function listener_move(){
+      target_move = Number($("#input_score").val());
+      temp_move += (target_move / 100);
+      console.log(temp_move);
+      if(temp_move >= target_move){
+        clearInterval(move_function);
+      }
+      $('#div_btn').css("left", temp_move);
+    }
+  </script>
+</body>
+</html>

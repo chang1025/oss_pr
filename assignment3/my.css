@@ -1,0 +1,15 @@
+/* 스마트폰 크기 */
+@media (max-width: 768px) {
+
+  /* 컨테이너의 최대 너비를 100%로 늘리고 좌우 패딩만 남김 */
+  .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+  }
+
+  .sm btn{
+    width: 10%;
+  }
+}
