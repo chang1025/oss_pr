@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div{
+      border: 2px solid green;
+      margin: 10px;
+      padding: 5px;
+      width: 10%;
+    }
+
+    .relative{
+      position: relative;
+      left:30px;
+    }
+    .fixed{
+      background-color:skyblue;
+      position: fixed;
+      bottom:0; 
+      right:0; 
+      width:200px;
+    }
+    .sticky{
+      background-color:mediumslateblue;
+      position: sticky;
+      top:0;
+    } 
+  </style>
+</head>
+<body>
+  <div>div-position: static</div>
+  <div class="relative">div-position: relative</div>
+  <div class="fixed">div-position: fixed</div>
+  <div class="sticky">div-position: sticky</div>
+  <a>1</a>
+  <a>2</a> <br/>
+  <a>3</a>
+  <a href="index.html">index</a>
+  
+  <form action="index.html" method="post">
+    <label for="name">이름: </label>
+    <input type="text" id="name" name="name" placeholder="이름"><br/>
+    <label for="email">이메일:</label>
+    <input type="text" id="email" name="email"><br/>
+
+    <input type="submit" value="제출">
+    <input type="reset" value="삭제">
+  </form>
+
+  <div id="mousetest"onmouseover="listener_over()" onmouseout="listener_out()">onmouseover test</div>
+
+  <script>
+    const input = prompt();
+
+    if(confirm('입력 하시겠습니까?')){
+      console.log('Yes');
+    }
+    else{
+      console.log('No');
+    }
+    if(input == 1){
+      console.log('one');
+    }
+    else{
+      console.log('no');
+    }
+
+    let val1, val2, val3, val4, val5, val6, val7;
+    // Outer height and width
+    val1 = window.outerHeight;
+    val2 = window.outerWidth;
+    // Inner height and width
+    val3 = window.innerHeight;
+    val4 = window.innerWidth;
+    // Scroll points
+    val5 = window.scrollY;
+    val6 = window.scrollX;
+    val7 = window.location;
+
+    console.log("out height:" + val1);
+    console.log("out width:" + val2);
+    console.log("inner height:" + val3);
+    console.log("inner width:" + val4);
+    // alert(val5);
+    // alert(val6);
+    // alert(val7);
+    let mousetest = document.getElementById('mousetest');
+    function listener_over(){
+      console.log('on');
+      mousetest.style.backgroundColor = 'red';
+    }
+    function listener_out(){
+      console.log('out');
+      mousetest.style.backgroundColor = 'white';
+    }
+
+    // let mousetest = $("#mousetest");
+    // function listener_over(){
+    //   console.log('on');
+    //   mousetest.css("background", "red");
+    // }
+    // function listener_out(){
+    //   console.log('out');
+    //   mousetest.css("background", "white");
+    // }
+
+  </script>
+</body>
+</html>

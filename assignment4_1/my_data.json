@@ -1,0 +1,81 @@
+{
+  "people": [
+    {
+      "id": "1",
+      "name": "Hong Gil-dong",
+      "age": "21",
+      "hobby": "Soccer",
+      "gender": "Male"
+    },
+    {
+      "id": "2",
+      "name": "Kim Min-ji",
+      "age": "23",
+      "hobby": "Reading",
+      "gender": "Female"
+    },
+    {
+      "id": "3",
+      "name": "Lee Seo-jun",
+      "age": "25",
+      "hobby": "Hiking",
+      "gender": "Male"
+    },
+    {
+      "id": "4",
+      "name": "Park Ha-neul",
+      "age": "20",
+      "hobby": "Watching Movies",
+      "gender": "Female"
+    },
+    {
+      "id": "5",
+      "name": "Choi Ji-hoon",
+      "age": "28",
+      "hobby": "Cooking",
+      "gender": "Male"
+    },
+    {
+      "id": "6",
+      "name": "Jung So-mi",
+      "age": "22",
+      "hobby": "Listening to Music",
+      "gender": "Female"
+    },
+    {
+      "id": "7",
+      "name": "Kang Tae-young",
+      "age": "27",
+      "hobby": "Traveling",
+      "gender": "Male"
+    },
+    {
+      "id": "8",
+      "name": "Yoon Ah-reum",
+      "age": "24",
+      "hobby": "Knitting",
+      "gender": "Female"
+    },
+    {
+      "id": "9",
+      "name": "Jo Woo-jin",
+      "age": "26",
+      "hobby": "Gaming",
+      "gender": "Male"
+    },
+    {
+      "id": "10",
+      "name": "Han Ji-a",
+      "age": "19",
+      "hobby": "Dancing",
+      "gender": "Female"
+    },
+    {
+      "name": "Kim Kwon-chang",
+      "age": "32",
+      "hobby": "Take a picture",
+      "gender": "Female",
+      "id": "96d3"
+    }
+  ]
+}

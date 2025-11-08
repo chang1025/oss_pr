@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let fruits1 = ["apple", 'banana', "melon"];
+    // console.log(fruits1[1]);
+
+    // let fruits2 = []; // 강제로 지정해도 잘 됨
+    // fruits2[0] = "apple";
+    // fruits2[2] = "banana";
+    // console.log(fruits2[2]);
+    // for (let each of fruits2) {
+    //   console.log(each);
+    // }
+
+    // let fruits3 = new Array("apple", "banana", "melon");
+    // for (let each of fruits3) {
+    //   console.log(each);
+    // }
+
+    // fruits3.push("orange");
+    // for (let each of fruits3) {
+    //   console.log(each);
+    // }
+
+    // function arraypush(obj_a, obj_i) {
+    //   obj_a[obj_a.length] = obj_i;
+    // }
+
+    // arraypush(fruits3, "new1");
+    // for (let each of fruits3) {
+    //   console.log(each);
+    // }
+
+    // 구조분해할당
+    let fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+    // Destructuring
+    let [a1, a2] = fruits;
+    let [aa1, ,  aa2] = fruits;
+    let { [0]: aaa1, [1]: aaa2 } = fruits;
+
+    let new_a1 = fruits[0];
+
+    console.log(a1 + "//" + a2);
+    console.log(aa1 + "//" + aa2);
+
+    // let person = {
+    //   firstName: "John",
+    //   lastName: "Doe",
+    //   age: 50
+    // };
+    // // Destructuring
+    // // let {lastName, firstName} = person;
+    // // Default value
+    // // let {firstName, lastName, country = "US" } = person;
+    // // console.log(person["country"]);
+    // // console.log(country);
+    // // Property alias
+    // // let { lastName: name } = person;
+    // let {lastName : name} = person;
+    // console.log(name);
+    // // ket value에 함수를 담을 수도 있다.
+
+    // const aaaa = function(){
+    //   alert(11111);
+    // }
+
+    window.open("https://www.daum.net");
+
+    // 쿠키, 데이터 베이스의 임시 저장소
+    // 유럽에서의 법 지정
+  </script>
+
+</body>
+
+</html>
