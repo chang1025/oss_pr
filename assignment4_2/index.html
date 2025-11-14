@@ -31,7 +31,7 @@
   <script>
     function show_list() {
       const xhr = new XMLHttpRequest();
-      xhr.open("GET", "https://6915287d84e8bd126af8d78e.mockapi.io/people"); // 서버를 연다?
+      xhr.open("GET", "https://6915287d84e8bd126af8d78e.mockapi.io/people/"); // 서버를 연다?
       xhr.setRequestHeader("content-type", "application/json");
       xhr.send(); // 실제로 전송
       xhr.onload = () => {
@@ -52,7 +52,7 @@
       $("#btn_list").click(function () {
 
         const xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://6915287d84e8bd126af8d78e.mockapi.io/people"); // 서버에 있는 데이터 가져옴
+        xhr.open("GET", "https://6915287d84e8bd126af8d78e.mockapi.io/people/"); // 서버에 있는 데이터 가져옴
         xhr.setRequestHeader("content-type", "application/json");
         xhr.send(); // 실제로 전송
         xhr.onload = () => {
@@ -73,7 +73,7 @@
       $("#btn_add").click(function () {
 
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://6915287d84e8bd126af8d78e.mockapi.io/people"); // post 데이터 추가시
+        xhr.open("POST", "https://6915287d84e8bd126af8d78e.mockapi.io/people/"); // post 데이터 추가시
         xhr.setRequestHeader("content-type", "application/json");
         let data = { name: $("#input_name").val(), age: $("#input_age").val(), hobby: $("#input_hobby").val(), gender: $("#input_gender").val() };
         xhr.send(JSON.stringify(data));
@@ -92,7 +92,7 @@
       $("#btn_delete").click(function () {
 
         const xhr = new XMLHttpRequest();
-        xhr.open("DELETE", "https://6915287d84e8bd126af8d78e.mockapi.io/people" + $("#input_id").val());
+        xhr.open("DELETE", "https://6915287d84e8bd126af8d78e.mockapi.io/people/" + $("#input_id").val());
         // delete는 삭제, 뒤에 해당 id를 넣어줌
         xhr.setRequestHeader("content-type", "application/json");
         xhr.send();
@@ -111,7 +111,7 @@
       $("#btn_update").click(function () {
 
         const xhr = new XMLHttpRequest();
-        xhr.open("PUT", "https://6915287d84e8bd126af8d78e.mockapi.io/people" + $("#input_id").val());
+        xhr.open("PUT", "https://6915287d84e8bd126af8d78e.mockapi.io/people/" + $("#input_id").val());
         // put은 수정, 덮어쓴다 id를 줌
         xhr.setRequestHeader("content-type", "application/json");
         let data = { name: $("#input_name").val(), age: $("#input_age").val(), hobby: $("#input_hobby").val(), gender: $("#input_gender").val() };
