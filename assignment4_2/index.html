@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <title>Assignment#4-2 22200200 김창권</title>
+</head>
+
+<body>
+  id : <input type="text" id="input_id" />
+  name : <input type="text" id="input_name" />
+  age : <input type="number" id="input_age" />
+  hobby : <input type="text" id="input_hobby" />
+  <label for="select_gender">gender : </label>
+  <select name="gender" id="input_gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+  <button id="btn_list">목록 보기</button>
+  <button id="btn_add">추가</button>
+  <button id="btn_delete">삭제</button>
+  <button id="btn_update">수정</button>
+
+  <div id="div_list"></div>
+
+  <script>
+    function show_list() {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://6915287d84e8bd126af8d78e.mockapi.io/people"); // 서버를 연다?
+      xhr.setRequestHeader("content-type", "application/json");
+      xhr.send(); // 실제로 전송
+      xhr.onload = () => {
+        if (xhr.status === 200) { // 제대로 받았으면
+          let res = JSON.parse(xhr.response); // JSON 형식을 사용가능하게 변환4
+          $("#div_list").html(""); // div_list 안에 있는 거 비우기
+          res.forEach(function (each) { // res의 모든 원소 순환
+            $("#div_list").append(`<div>${each.id} : ${each.name}[${each.age}](${each.gender}) hobby : ${each.hobby}</div>`);
+          });
+        }
+        else {
+          console.log(xhr.status, xhr.statusText);
+        }
+      }
+    }
+    $(function () {
+      // 목록 보기
+      $("#btn_list").click(function () {
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://6915287d84e8bd126af8d78e.mockapi.io/people"); // 서버에 있는 데이터 가져옴
+        xhr.setRequestHeader("content-type", "application/json");
+        xhr.send(); // 실제로 전송
+        xhr.onload = () => {
+          if (xhr.status === 200) { // 제대로 받았으면
+            let res = JSON.parse(xhr.response); // JSON 형식을 사용가능하게 변환4
+            $("#div_list").html(""); // div_list 안에 있는 거 비우기
+            res.forEach(function (each) { // res의 모든 원소 순환
+              $("#div_list").append(`<div>${each.id} : ${each.name}[${each.age}](${each.gender}) hobby : ${each.hobby}</div>`);
+            });
+          }
+          else {
+            console.log(xhr.status, xhr.statusText);
+          }
+        }
+      });
+
+      // 추가
+      $("#btn_add").click(function () {
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://6915287d84e8bd126af8d78e.mockapi.io/people"); // post 데이터 추가시
+        xhr.setRequestHeader("content-type", "application/json");
+        let data = { name: $("#input_name").val(), age: $("#input_age").val(), hobby: $("#input_hobby").val(), gender: $("#input_gender").val() };
+        xhr.send(JSON.stringify(data));
+        xhr.onload = () => {
+          if (xhr.status === 200 || xhr.status === 201) {
+            alert("추가되었습니다.");
+            show_list();
+          }
+          else {
+            console.log(xhr.status, xhr.statusText);
+          }
+        }
+      });
+
+      // 삭제
+      $("#btn_delete").click(function () {
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("DELETE", "https://6915287d84e8bd126af8d78e.mockapi.io/people" + $("#input_id").val());
+        // delete는 삭제, 뒤에 해당 id를 넣어줌
+        xhr.setRequestHeader("content-type", "application/json");
+        xhr.send();
+        xhr.onload = () => {
+          if (xhr.status === 200) {
+            alert("삭제 되었습니다.");
+            show_list();
+          }
+          else {
+            console.log(xhr.status, xhr.statusText);
+          }
+        }
+      });
+
+      // 수정
+      $("#btn_update").click(function () {
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("PUT", "https://6915287d84e8bd126af8d78e.mockapi.io/people" + $("#input_id").val());
+        // put은 수정, 덮어쓴다 id를 줌
+        xhr.setRequestHeader("content-type", "application/json");
+        let data = { name: $("#input_name").val(), age: $("#input_age").val(), hobby: $("#input_hobby").val(), gender: $("#input_gender").val() };
+        xhr.send(JSON.stringify(data));
+        xhr.onload = () => {
+          if (xhr.status === 200) {
+            alert("수정되었습니다");
+            show_list();
+          }
+          else {
+            console.log(xhr.status, xhr.statusText);
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
